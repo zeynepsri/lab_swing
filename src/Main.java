@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main extends JFrame implements ActionListener {
-    //Ekrana TextField
     private JTextField adSoyadField;
     private JTextField emailField;
     private JTextField telefonField;
@@ -16,7 +15,8 @@ public class Main extends JFrame implements ActionListener {
         // Frame ayarları
         setTitle("LAB-Swing Uygulaması");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
+        setLayout(null); // Set layout manager to null
+
         // Bilgiler
         JLabel adSoyadLabel = new JLabel("Ad-Soyad: ");
         JLabel emailLabel = new JLabel("Email: ");
@@ -36,6 +36,17 @@ public class Main extends JFrame implements ActionListener {
         JButton kaydetButton = new JButton("Kayıt Et");
         kaydetButton.addActionListener(this);
 
+        // Set bounds for components
+        adSoyadLabel.setBounds(10, 10, 120, 25);
+        adSoyadField.setBounds(130, 10, 200, 25);
+        emailLabel.setBounds(10, 40, 120, 25);
+        emailField.setBounds(130, 40, 200, 25);
+        telefonLabel.setBounds(10, 70, 120, 25);
+        telefonField.setBounds(130, 70, 200, 25);
+        cinsiyetLabel.setBounds(10, 100, 120, 25);
+        cinsiyetCombo.setBounds(130, 100, 200, 25);
+        kaydetButton.setBounds(130, 130, 200, 25);
+
         // Arayüz bileşenlerini ekleme
         add(adSoyadLabel);
         add(adSoyadField);
@@ -47,8 +58,8 @@ public class Main extends JFrame implements ActionListener {
         add(cinsiyetCombo);
         add(kaydetButton);
 
-        // Arayüzü gösterme
-        pack();
+        // Set the size of the JFrame
+        setSize(350, 200);
         setVisible(true);
     }
 
