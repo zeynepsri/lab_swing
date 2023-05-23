@@ -36,7 +36,7 @@ public class Main extends JFrame implements ActionListener {
         JButton kaydetButton = new JButton("Kayıt Et");
         kaydetButton.addActionListener(this);
 
-        // Set bounds for components
+        // Ekranda görüntüyü düzenleme
         adSoyadLabel.setBounds(10, 10, 120, 25);
         adSoyadField.setBounds(130, 10, 200, 25);
         emailLabel.setBounds(10, 40, 120, 25);
@@ -58,7 +58,7 @@ public class Main extends JFrame implements ActionListener {
         add(cinsiyetCombo);
         add(kaydetButton);
 
-        // Set the size of the JFrame
+        // Frame Boyutunu ve görünürlüğünü belirleme
         setSize(350, 200);
         setVisible(true);
     }
